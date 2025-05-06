@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Jeu - Devine le Nombre</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game1">
+  <header>
+    <h1>Mini Jeu - Devine le Nombre</h1>
+    <a href="index.html" class="btn">Retour à l'accueil</a>
+  </header>
+  <div id="timer">
+    Temps écoulé : <span id="time">0</span> secondes <br>
+    Meilleur temps : <span id="best-time1">--</span> secondes
+  </div>
+  
+  <div id="game-container">
+    <h2>Devine un nombre entre 1 et 100</h2>
+    <input type="number" id="guess-input" placeholder="Ton nombre..." />
+    <button onclick="checkGuess()">Essayer</button>
+
+    <p id="message"></p>
+    <p>Nombre d'essais: <span id="attempts">0</span></p>
+  </div>
+
+  <footer>
+    <p class="cred">&copy; 2025 Escape Game. Tous droits réservés.</p>
+  </footer>
+
+  <script src="jeu1.js"></script> <!-- Script du jeu -->
+</body>
+</html>

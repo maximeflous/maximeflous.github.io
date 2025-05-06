@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Charade Visuelle</title>
+  <link rel="stylesheet" href="style.css"> <!-- Ton fichier global -->
+</head>
+<body class="charade">
+  <header>
+    <h1>Mini Jeu - Devine le Nombre</h1>
+    <a href="index.html" class="btn">Retour à l'accueil</a>
+  </header>
+
+  <div id="timer">
+    Temps écoulé : <span id="time">0</span> secondes <br>
+    Meilleur temps : <span id="best-time3">--</span> secondes
+  </div>
+
+  <div class="charade-container">
+    <h1>Devine le mot grâce aux images</h1>
+    <div class="charade-images">
+      <img src="images/s.png" alt="s">
+      <img src="images/bus.png" alt="car">
+      <img src="images/mouche.png" alt="mouche">
+    </div>
+    <input type="text" id="guess" placeholder="Ta réponse ici...">
+    <button onclick="checkAnswer()">Valider</button>
+    <p id="feedback"></p>
+  </div>
+  <footer>
+    <p>&copy; 2025 Escape Game. Maxime Flous.</p>
+  </footer>
+  <script src="jeu3.js"></script>
+</body>
+</html>

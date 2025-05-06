@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paramètres</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="index.html">Menu Principal</a></li>
+      <li><a href="credits.html">Crédits</a></li>
+      <li><a href="settings.html" class="active">Paramètres</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenu principal -->
+  <div class="content">
+    <header>
+      <div class="logo">
+        <h1>Paramètres</h1>
+      </div>
+    </header>
+
+    <section class="settings-section">
+      <div class="settings-card">
+        <h2>Nom d'utilisateur</h2>
+        <input type="text" id="username-input" placeholder="Entrez votre nom" />
+        <button class="btn" onclick="saveUsername()">Enregistrer</button>
+      </div>
+    </section>
+
+    <footer>
+      <p class="cred">&copy; 2025 Escape Game. Tous droits réservés.</p>
+    </footer>
+  </div>
+
+  <!-- Script JS -->
+  <script>
+    function saveUsername() {
+      const username = document.getElementById("username-input").value.trim();
+      if (username) {
+        localStorage.setItem("username", username);
+        alert("Nom d'utilisateur enregistré !");
+      } else {
+        alert("Veuillez entrer un nom.");
+      }
+    }
+
+    // Afficher le nom si déjà défini
+    window.onload = () => {
+      const saved = localStorage.getItem("username") || "";
+      document.getElementById("username-input").value = saved;
+    };
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Game - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Bouton pour ouvrir/fermer le menu latéral -->
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+
+    <!-- Menu latéral -->
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html" class="active">Menu Principal</a></li>
+            <li><a href="credits.html">Crédits</a></li>
+            <li><a href="settings.html">Paramètres</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div class="content" id="content">
+        <header>
+            <div class="logo">
+                <h1>Escape Game</h1>
+            </div>
+        </header>
+
+        <main>
+            <section class="intro">
+                <h2 id="welcome-title">Bienvenue !</h2>
+                <p id="best-time1"></p>
+                <p id="best-time2"></p>
+                <p id="best-time3"></p>
+                
+                
+                <p>Plongez dans une aventure pleine de mystères et d'énigmes à résoudre.</p>
+            </section>
+
+            <section class="games-section">
+                <h2 class="nos-jeux">Nos Jeux</h2>
+                <div class="game-cards" id="game-cards"></div>
+            </section>
+
+            <footer>
+                <p class="cred">&copy; 2025 Escape Game. Maxime Flous.</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

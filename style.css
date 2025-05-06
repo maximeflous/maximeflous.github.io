@@ -1,0 +1,402 @@
+/* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Menu latéral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #222;
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: block;
+    padding: 10px 0;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #ff007f;
+}
+
+/* Contenu principal */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #222;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    color: #ff007f;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Intro */
+.intro {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    color: #ff007f;
+    margin-bottom: 20px;
+}
+
+.cred {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.intro p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Bouton principal */
+.btn {
+    background-color: #ff007f;
+    color: #111;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00b3b3;
+}
+
+/* Section des jeux */
+.games-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.nos-jeux {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.game-cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game-card {
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 400px;
+    max-width: 90%;
+    min-height: 480px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;                  /* ✅ active Flexbox */
+    flex-direction: column;        /* ✅ éléments du haut vers le bas */
+    justify-content: space-between;/* ✅ espace entre contenu & bouton */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(100, 0, 50, 0.4);
+}
+
+.game-footer {
+    margin-top: 20px;
+}
+
+.game-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 20px rgba(100, 0, 50, 0.8);
+}
+
+.game-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #ff007f;
+}
+
+.game-card h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #ff007f;
+}
+
+.game-card p {
+    padding: 10px;
+    font-size: 1em;
+}
+
+.credit-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.credit-card {
+    background-color: #222;
+    border-radius: 12px;
+    padding: 40px 60px;
+    box-shadow: 0 0 25px rgba(100, 0, 50, 0.8); /* ✅ ombre cyan */
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.cyan-title {
+    font-size: 2em;
+    color: #ff007f;
+    margin-bottom: 20px;
+}
+
+.credit-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+}
+
+#username-input {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  border: none;
+  width: 80%;
+  margin-bottom: 20px;
+}
+.settings-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.settings-card {
+  background-color: #222;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(100, 0, 50, 0.8);
+  max-width: 500px;
+  width: 100%;
+}
+
+.settings-card h2 {
+  color: #ff007f;
+  margin: 20px 0 10px;
+}
+
+.settings-card input {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  border: none;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+
+ 
+  body.game1 {
+    background: #222;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px;
+  }
+  
+  #game-container {
+    background: #333;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  button {
+    background-color: #ff007f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #d6026c;
+  }
+  
+  input {
+    padding: 8px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 150px;
+    text-align: center;
+  }
+  
+  #message {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 300px;
+  }
+
+
+
+  body.charade {
+    background: #222;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .charade-container {
+    background: #333;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .charade-container h1 {
+    margin-bottom: 20px;
+  }
+  
+  .charade-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .charade-images img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .charade-container input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .charade-container button {
+    padding: 10px 18px;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #ff007f;
+    color: white;
+    border-radius: 6px;
+  }
+  
+  .charade-container #feedback {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+
+  .step {
+    margin-top: 20px;
+    display: none;
+  }
+  
+  .step.active {
+    display: block;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  input {
+    padding: 8px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+  }
+  
+  button {
+    background-color: #ff007f;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #d6026c;
+  }
+  
+  #timer {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #444;
+  }
+    
